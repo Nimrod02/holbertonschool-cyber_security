@@ -1,2 +1,2 @@
 #!/bin/bash
-sudo last -i -
+sudo last -i 
