@@ -1,2 +1,2 @@
 #!/bin/bash
-ss  -t 
+ss  -t -a -n -p 
