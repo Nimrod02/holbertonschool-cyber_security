@@ -1,2 +1,2 @@
 #!/bin/bash
-echo $1 | md5sum > 2_hash.txt
+echo -n $1 | md5sum > 2_hash.txti
