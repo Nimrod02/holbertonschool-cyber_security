@@ -1,2 +1,2 @@
 #!/bin/bash
-sudo tcpdump --interface any -c5
+sudo tcpdump --i -c 5 eth0

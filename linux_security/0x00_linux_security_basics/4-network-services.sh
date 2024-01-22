@@ -1,2 +1,2 @@
 #!/bin/bash
-sudo netstat -atonp
+sudo netstat -pnltu
