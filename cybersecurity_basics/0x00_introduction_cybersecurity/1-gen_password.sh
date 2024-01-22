@@ -1,2 +1,2 @@
 #!/bin/bash
-< /dev/urandom tr -dc '[:graph:]' | head -c "${1}"; echo  
+fold -w1 /dev/urandom | tr -dc '[:alnum:]' | head -n 10 -c "$1";
