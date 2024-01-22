@@ -1,2 +1,2 @@
 #!/bin/bash
-lsb_release -i -s
+lsb_release -s -i | awk '{print $1}'
