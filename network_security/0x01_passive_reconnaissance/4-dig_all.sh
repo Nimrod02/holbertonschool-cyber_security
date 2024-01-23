@@ -1,2 +1,2 @@
 #!/bin/bash
-sudo dig +nocmd $1 +noall ANY
+dig @8.8.8.8 +noall +answer ANY $1
