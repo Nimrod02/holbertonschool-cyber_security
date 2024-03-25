@@ -1,2 +1,3 @@
 #!/bin/bash
-sudo useradd $1 -p $2
+useradd -m $1
+echo "$1 $2" | chpasswd
