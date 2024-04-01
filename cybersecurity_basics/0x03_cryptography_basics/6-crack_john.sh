@@ -1,2 +1,2 @@
 #!/bin/bash
-john --format=raw-ShA256 $1
+john --wordlist=/usr/share/wordlists/rockyou.txt --format=raw-ShA256 $1
