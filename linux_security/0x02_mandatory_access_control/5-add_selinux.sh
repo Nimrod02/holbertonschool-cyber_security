@@ -1,2 +1,2 @@
 #!/bin/bash
-semanage user -a -R user_u "$1"
+semanage login -a -R user_u "$1"
