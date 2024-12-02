@@ -1,2 +1,2 @@
 #!/bin/bash
-ps aux $1 | grep -v
+ps aux -u $1 | grep -v grep
