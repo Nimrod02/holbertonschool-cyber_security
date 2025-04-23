@@ -1,24 +1,18 @@
-#! /usr/bin/env ruby
+#!/usr/bin/env ruby
 
 require 'json'
 
 def merge_json_files(file1_path, file2_path)
-  # Lire les deux fichiers JSON
-  file1_data = JSON.parse(File.read(file1_path))
-  file2_data = JSON.parse(File.read(file2_path))
+  file1_content = File.read(file1_path)
+  data1 = JSON.parse(file1_content)
 
-  # Fusionner les tableaux
-  merged_data = file1_data + file2_data
+  file2_content = File.read(file2_path)
+  data2 = JSON.parse(file2_content)
 
-  # Compter les userId
-  counts = Hash.new(0)
-  merged_data.each do |item|
-    user_id = item["userId"]
-    counts[user_id] += 1
-  end
+  merged_data = data2 + data1
 
-  # Afficher les résultats triés par userId
-  counts.sort.each do |user_id, count|
-    puts "#{user_id}: #{count}"
-  end
+  File.write(file2_path, JSON.pretty_generate(merged_data))
+
+  puts 'Merged JSON written to file.json'
+  
 end
